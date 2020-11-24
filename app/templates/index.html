@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+{% import 'macros.html' as macro%}
+
+{% block content %}
+<body>
+    <h3>SCIENCE</h3>
+    <ul>
+        
+       {{ macro.displaySourceList(science)}}
+    </ul>
+    <h3>SPORTS</h3>
+    <ul>
+        {{ macro.displaySourceList(sports)}}
+    </ul>
+    <h3>ENTERTAINMENT</h3>
+    <ul>
+        {{ macro.displaySourceList(entertainment)}}
+    </ul>
+    <h3>TECHNOLOGY</h3>
+    <ul>
+        {{ macro.displaySourceList(technology)}}
+    </ul>
+    <h3>GENERAL</h3>
+    <ul>
+        {{ macro.displaySourceList(general)}}
+    </ul>
+    <h3>BUSINESS</h3>
+    <ul>
+        {{ macro.displaySourceList(business)}}
+    </ul>
+    <h3>HEALTH</h3>
+    <ul>
+        {{ macro.displaySourceList(health)}}
+    </ul>
+</body>
+
+{% endblock %}
