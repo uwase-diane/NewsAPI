@@ -32,5 +32,5 @@ def articles(id):
     '''
     articles = get_articles(id)
     title = f'{id}'
-    return render_template('article.html',title = title, articles = articles)
+    return render_template('articles.html',title = title, articles = articles)
 
