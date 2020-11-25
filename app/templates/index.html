@@ -2,34 +2,65 @@
 
 {% import 'macros.html' as macro%}
 
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+
 {% block content %}
 <body>
-    <h3>SCIENCE</h3>
+
+    <div class="text-center">
+        <h3 style="color: #31aaaa; padding-bottom: 20px;"><strong>GENERAL</strong></h3>
+    </div>
+    
+    <ul>
+        {{ macro.displaySourceList(general)}}
+    </ul>
+
+   <div class="text-center">
+
+    <h3 style="color: #31aaaa; padding-bottom: 20px;"><strong>ENTERTAINMENT</strong></h3>
+ </div> 
+    <ul>
+        {{ macro.displaySourceList(entertainment)}}
+    </ul>
+   
+    <div class="text-center">
+        <h3 style="color: #31aaaa; padding-bottom: 20px;"><strong>TECHNOLOGY</strong></h3>
+    </div>
+
+    <ul>
+        {{ macro.displaySourceList(technology)}}
+    </ul>
+    
+    <div class="text-center">
+        <h3 style="color: #31aaaa; padding-bottom: 20px;"><strong>BUSINESS</strong></h3>
+    </div>
+    
+    <ul>
+        {{ macro.displaySourceList(business)}}
+    </ul>
+    <div class="text-center">
+        <h3 style="color: #31aaaa; padding-bottom: 20px;"><strong>SCIENCE</strong></h3>
+    </div>
+   
     <ul>
         
        {{ macro.displaySourceList(science)}}
     </ul>
-    <h3>SPORTS</h3>
+    <div class="text-center">
+        <h3 style="color: #31aaaa; padding-bottom: 20px;"><strong>SPORTS</strong></h3>
+    </div>
+   
     <ul>
         {{ macro.displaySourceList(sports)}}
     </ul>
-    <h3>ENTERTAINMENT</h3>
-    <ul>
-        {{ macro.displaySourceList(entertainment)}}
-    </ul>
-    <h3>TECHNOLOGY</h3>
-    <ul>
-        {{ macro.displaySourceList(technology)}}
-    </ul>
-    <h3>GENERAL</h3>
-    <ul>
-        {{ macro.displaySourceList(general)}}
-    </ul>
-    <h3>BUSINESS</h3>
-    <ul>
-        {{ macro.displaySourceList(business)}}
-    </ul>
-    <h3>HEALTH</h3>
+    <div class="text-center">
+        <h3 style="color: #31aaaa; padding-bottom: 20px;"><strong>HEALTH</strong></h3>
+    </div>
+    
     <ul>
         {{ macro.displaySourceList(health)}}
     </ul>
