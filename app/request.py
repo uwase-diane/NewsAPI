@@ -67,7 +67,7 @@ def get_articles(id):
     '''
     Function to return a list
     '''
-    get_articles_url = articles_url.format(id,api_key)
+    get_articles_url = article_url.format(id,api_key)
     with urllib.request.urlopen(get_articles_url) as url:
         articles_results = json.loads(url.read())
         articles_object = None
@@ -89,7 +89,7 @@ def process_articles(articles_list):
         title = article_item.get('title')
         description = article_item.get('description')
         url = article_item.get('url')
-        publishedAt = item.get('publishedAt')
+        publishedAt = article_item.get('publishedAt')
 
 
         if urlToImage:
